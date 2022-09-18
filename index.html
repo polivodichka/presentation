@@ -15,86 +15,11 @@
 	<link rel="stylesheet" href="plugin/highlight/monokai.css">
 </head>
 <style>
-	.list-mark {
-		display: inline-block;
-		width: 30px;
-		height: 30px;
-		margin-right: 0.5em;
-		border: 7px solid white;
-		border-radius: 50%;
-		color: #fff;
-		text-align: center;
-		line-height: 1.25em;
-		content: '';
-	}
-
-	.list-mark-bigger {
-		display: inline-block;
-		width: 35px;
-		height: 35px;
-		margin-right: 0.5em;
-		border: 7px solid white;
-		border-radius: 50%;
-		color: #fff;
-		text-align: center;
-		line-height: 1.25em;
-		content: '';
-	}
-
-	.file {
-		display: inline-block;
-		background: #eee;
-		text-align: center;
-		margin: auto;
-		overflow: hidden;
-	}
-
-	.file:before {
-		content: "---";
-		display: block;
-	}
-
-	.file:after {
-		content: "";
-		display: block;
-		position: relative;
-		width: 0;
-		height: 0;
-		border-left: none;
-		border-top: none;
-		background: #222;
-	}
-
-	.file_small {
-		width: 40px;
-		height: 60px;
-		line-height: 16px;
-		font-size: 128px;
-	}
-
-	.file_small:after {
-		bottom: 48px;
-		left: 28px;
-		border: solid 12px transparent;
-		border-left: none;
-		border-top: none;
-		border-bottom: solid 12px #ccc;
-	}
-
-	.file_big {
-		width: 100px;
-		height: 150px;
-		line-height: 40px;
-		font-size: 300px;
-	}
-
-	.file_big:after {
-		bottom: 120px;
-		left: 80px;
-		border: solid 20px transparent;
-		border-left: none;
-		border-top: none;
-		border-bottom: solid 20px #ccc;
+	.liElem {
+		display: flex;
+		flex-direction: row;
+		gap: 20px;
+		align-items: center;
 	}
 </style>
 
@@ -105,249 +30,99 @@
 		<!-- Any section element inside of this container is displayed as a slide -->
 		<div class="slides">
 			<section>
-				<h1>Docker</h1>
-				<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/283501/images/3696496/Whale2.gif"
-					alt="Docker">
+				<h1>Техническая реализация</h1>
+				<h3>Особенности технической реализации и репозиторий проекта</h3>
 			</section>
 			<section>
-				<p>
-					In simple terms, <em>Docker</em> is a software platform that simplifies the process of building,
-					running, managing and distributing applications.
-				</p>
-				<p>
-					It does this by virtualizing the operating system of the computer on which it is installed and
-					running.
-				</p>
-			</section>
-			<section>
-				<h2>It works on my machine!!!</h2>
-				<img src="https://www.menslife.com/upload/iblock/553/kak_poborot_gnev_5_rabotayushchikh_sposobov.jpg"
-					alt="Docker">
+				<h2>Используемые технологии:</h2>
 			</section>
 
 			<!-- Example of nested vertical slides -->
 			<section>
-				<section>
-					<h4>Problems</h4>
+				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+					<h2>React<img src="https://miro.medium.com/max/1400/1*WA_9JsyqFkge2HwYKcdJQw.png" width='100'
+							style="display: inline-block;" alt="Docker"></h2>
+
+					<h4>Достоинства</h4>
 					<ul>
-						<li class="fragment">One or more files are missing</li>
-						<li class="fragment">Software versions mismatch</li>
+						<li class="fragment">Виртуальный DOM</li>
+						<li class="fragment">Повторное применение компонентов</li>
+						<li class="fragment">TypeScript XML (TSX) - это расширение синтаксиса TypeScript, которое
+							позволяет использовать синтаксис, подобный HTML, для описания структуры интерфейса</li>
 					</ul>
 				</section>
 				<section>
-					<h4>Docker SOLUTION:</h4>
-					<div style="text-align: center;">
-						<p class="fragment">Package</p>
-						<ul style="border-radius: 20px; background-color: rgba(0,0,0,0.1); padding: 20px 100px; list-style: none; margin: 0;"
-							class="list-marks fragment">
-							<li class="yellow fragment">
-								<div class="list-mark" style="background-color: #ffea00;"></div> Node 14
-							</li>
-							<li class="red fragment">
-								<div class="list-mark" style="background-color: #ff005d;"></div>Mongo 4
-							</li>
-							<li class="blue">
-								<div class="list-mark" style="background-color: #00c3ff;"></div>App
-							</li>
-						</ul>
-					</div>
-				</section>
-			</section>
-			<section>
-				<section>
-					<h3>Container</h3>
-					<p>
-						An isolated environment for running an application.
-					</p>
+					<h2>React<img src="https://miro.medium.com/max/1400/1*WA_9JsyqFkge2HwYKcdJQw.png" width='100'
+							style="display: inline-block;" alt="Docker"></h2>
+
+					<h4>Недостатки</h4>
 					<ul>
-						Advantages:
-						<li>Allow running multiple apps in isolation</li>
-						<li>Are lightweight</li>
-						<li>Use OS of the host</li>
-						<li>Start quickly</li>
+						<li class="fragment">Мало опыта работы с ним,так что многие вещи приходилось понимать на ходу
+						</li>
 					</ul>
 				</section>
-				<section>
-					<div style="border-radius: 20px; border: 1px solid white; margin: 10px;">
-						<div style="display: flex; flex-direction: row; justify-content: space-between;">
-							<ul style="border-radius: 20px; background-color: rgba(0,0,0,0.1); padding: 20px 100px; list-style: none; margin: 10px;"
-								class="list-marks ">
-								<li class="yellow ">
-									<div class="list-mark" style="background-color: #ffea00;"></div> Node 14
-								</li>
-								<li class="blue">
-									<div class="list-mark" style="background-color: #00c3ff;"></div>App 1
-								</li>
-							</ul>
-							<ul style="border-radius: 20px; background-color: rgba(0,0,0,0.1); padding: 20px 100px; list-style: none; margin: 10px;"
-								class="list-marks ">
-								<li class="yellow ">
-									<div class="list-mark" style="background-color: #ffea00;"></div> Node 9
-								</li>
-								<li class="blue">
-									<div class="list-mark" style="background-color: #00c3ff;"></div>App 2
-								</li>
-							</ul>
-						</div>
-						<div
-							style="border-radius: 20px; background-color: rgba(0,0,0,0.1); padding: 20px 100px; margin: 10px;">
-							Docker engine</div>
-						<div
-							style="border-radius: 20px; background-color: rgba(0,0,0,0.1); padding: 20px 100px; margin: 10px;">
-							Host OS</div>
-					</div>
+				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+					<ul style="display: flex;flex-wrap: wrap; gap: 40px; justify-content: center;">
+						<li class="fragment liElem">Typescript<img
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png"
+								width='100' alt="TypeScript"></li>
+						<li class="fragment liElem">Styled Components<img
+								src="https://www.styled-components.com/atom.png" width='100'
+								style="display: inline-block;" alt="TypeScript"></li>
+						<li class="fragment liElem">Material UI<img
+								src="https://cdn.worldvectorlogo.com/logos/material-ui-1.svg" width='100'
+								style="display: inline-block;" alt="TypeScript"></li>
+						<li class="fragment liElem">Eslint<img
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/ESLint_logo.svg/1200px-ESLint_logo.svg.png"
+								width='100' style="display: inline-block;" alt="TypeScript"></li>
+						<li class="fragment liElem">Prettier<img
+								src="https://cdn.freebiesupply.com/logos/thumbs/2x/prettier-1-logo.png" width='100'
+								style="display: inline-block;" alt="TypeScript"></li>
+						<li class="fragment liElem">React Router Dom<img
+								src="https://seeklogo.com/images/R/react-router-logo-AB5BFB638F-seeklogo.com.png"
+								width='100' style="display: inline-block;" alt="TypeScript"></li>
+						<li class="fragment liElem">Telegram<img
+								src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Telegram_Messenger.png"
+								width='100' style="display: inline-block;" alt="TypeScript"></li>
+						<li class="fragment liElem">Trello<img
+								src="https://cdn-icons-png.flaticon.com/512/174/174874.png" width='100'
+								style="display: inline-block;" alt="TypeScript"></li>
+					</ul>
 				</section>
-				<section>
-					<div style="display: flex; flex-direction: row; justify-content: center;">
-						<ul style="border-radius: 20px; background-color: rgba(0,0,0,0.1); padding: 20px 100px; list-style: none; margin: 0;"
-							class="list-marks ">
-							<li class="yellow ">
-								<div class="list-mark" style="background-color: #ffea00;"></div> Node 14
-							</li>
-							<li class="blue">
-								<div class="list-mark" style="background-color: #00c3ff;"></div>App 1
-							</li>
-						</ul>
-					</div>
-				</section>
-			</section>
-			<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
-				<p>Application</p>
-				<div style="text-align: center;border-radius: 20px; border: 1px solid white; margin: 10px;">
-					<div style="display: flex; justify-content: center; gap: 20px 50px; padding: 20px;">
-						<div style="display: flex; flex-direction: column;" class="fragment">
-							<div class="yellow file file_small" style="background-color: #ffea00;"></div>
-							<div class="red file file_small" style="background-color: #ff005d;"></div>
-							<div class="blue file file_small" style="background-color: #00c3ff;"></div>
-						</div>
-						<div style="display: flex; flex-direction: column;" class="fragment">
-							<div class="file file_big" style="background-color: #4dff00;"></div>
-							<div>Dockerfile</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
-				<p>Application</p>
-				<div
-					style="text-align: center; border-radius: 20px; border: 1px solid white; margin: 10px; background-color: rgb(255, 251, 0);">
-					<div style="display: flex; justify-content: center; gap: 20px 50px; padding: 20px;">
-						<div>IMAGE</div>
-					</div>
-				</div>
+				<section data-background-image="assets/trello.jpg" data-background-size="contain"></section>
 			</section>
 			<section>
-				<h4>Image</h4>
-				<ul>
-					<li>A cut-down OS</li>
-					<li>A runtime environment</li>
-					<li>Application files</li>
-					<li>Libraries</li>
-					<li>Environment variables</li>
-				</ul>
-			</section>
+				<section>
+					<img src="assets/Снимок экрана 2022-09-17 193028.jpg" alt="">
+				</section>
+				<section>
+					<ul>
+						<li class="fragment liElem"><img src="assets/feat.jpg" alt="" width="300"></li>
+						<li class="fragment liElem"><img src="assets/fix.jpg" alt="" width="300"></li>
+						<li class="fragment liElem"><img src="assets/refactor.jpg" alt="" width="300"></li>
+					</ul>
 
+				</section>
+			</section>
 			<section>
+				<section data-background-image="assets/pr.jpg" data-background-size="contain" data-auto-animate
+					data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)"></section>
+				<section data-background-image="assets/pr1.jpg" data-background-size="contain" data-auto-animate
+					data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)"></section>
+				<section data-background-image="assets/pr2.jpg" data-background-size="contain" data-auto-animate
+					data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)"></section>
+				<section data-background-image="assets/pr3.jpg" data-background-size="contain" data-auto-animate
+					data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)"></section>
 				<section>
-					EXAMPLE
-				</section>
-
-				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
-					<div>
-						1. Download Docker from https://www.docker.com/
-						<video autoplay loop>
-							<source src="dist/assets/download.mp4" autoplay loop>
-						</video>
-					</div>
-				</section>
-				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
-					<div>
-						2. Install Docker and restart your system
-						<img src="dist/assets/install.jpg" alt="installation screenshot">
-					</div>
-				</section>
-				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
-					<div>
-						3. Start Docker Desktop
-						<p class="r-fit-text">Docker Desktop does not start automatically after installation. To start
-							Docker Desktop Search for Docker, and select Docker Desktop in the search results.</p>
-						<img src="dist/assets/startsearch.jpg" alt="installation screenshot" height="500">
-					</div>
-				</section>
-				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
-					<div>
-						4. Create Dockerfile in your app folder
-						<img src="dist/assets/folder.png" alt="installation screenshot" height="500">
-					</div>
-				</section>
-				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
-					<div>
-						4. Create Dockerfile in your app folder
-						<img src="dist/assets/folderDocker.png" alt="installation screenshot" height="500">
-					</div>
-				</section>
-				<section data-auto-animate>
-					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="|1-11|1|2|3|4|5|6|8|9|10|11|1-11">
-						FROM node:12-alpine as build
-						WORKDIR /app
-						COPY package.json /app/package.json
-						RUN npm install
-						COPY . /app
-						RUN npm run build
-						
-						FROM nginx:1.18-alpine
-						COPY --from=build /app/build /usr/share/nginx/html
-						EXPOSE 80
-						CMD ["nginx", "-g", "daemon off;"]
-					</code></pre>
-				</section>
-				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
-					5. Create image
-					<p style="font-size: small;">docker build -t &lt;IMAGE NAME&gt; &lt;PATH&gt;</p>
-					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="2">
-						docker build -t store .
-					</code></pre>
-				</section>
-				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
-					6. Create container
-					<p style="font-size: small;">docker run --rm -d --name &lt;CONTAINER NAME&gt; -p
-						&lt;PORT&gt;:&lt;PORT IN CONTAINER (from Dockerfile)&gt; &lt;IMAGE NAME&gt;</p>
-					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="2">
-							docker run --rm -d --name store -p 3000:80 store
-					</code></pre>
+					<img src="assets/schema.jpg" alt="">
 				</section>
 				<section>
-					<p>Congratulations! Your first working container!</p>
-					<p>In our case we can open localhost at port 3000 and see the result: everything is works fine :)</p>
+					<img src="assets/revert.jpg" alt="">
 				</section>
-				<section>
-					<img src="dist/assets/app.png" alt="">
-				</section>
-				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
-					7. Stop container
-					<p style="font-size: small;">docker stop &lt;CONTAINER NAME&gt;</p>
-					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="2">
-						docker stop store
-					</code></pre>
-				</section>
-				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
-					Now you can share your image using Docker Hub
-					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="|1|2">
-						docker tag store:latest polivodichka/store:myfirstimagepush
-						docker push polivodichka/store:myfirstimagepush
-					</code></pre>
-				</section>
-				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
-					<img src="dist/assets/hub.jpg" alt="">
-				</section>
-				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
-					Then to pull image
-					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="|1|2">
-						docker pull polivodichka/store:myfirstimagepush
-					</code></pre>
-				</section>
+				<section data-background-image="assets/meme.jpg" data-background-size="contain"></section>
 			</section>
-			<section>Thank you for attention :)</section>
+
+
 		</div>
 
 	</div>
